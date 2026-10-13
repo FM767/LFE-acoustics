@@ -1,0 +1,157 @@
+ANÁLISE CONJUNTA DO CRISTAL SÓNICO — ΓX (perpendicular) e ΓM (diagonal)
+As duas direções passam pelas mesmas contas; só muda d em f_B = c/(2d): d = a (ΓX), a/√2 (ΓM).
+Janelas (× f_B): nível base 0.35–0.7, profundidade 0.9–1.1, limiar T0 − 6 dB, hiato fecha se f_sup < 1.5 f_B.
+Referência: só as referências do próprio bloco (mesmo a); sem elas, as da sessão.
+
+ΓX: 40 medições, a = 32, 40, 48, 56 mm, T = 20.5 ± 1 °C → c = 343.5 ± 0.6 m/s
+ΓM: 23 medições, a = 32, 40, 48 mm, T = 20.0 ± 1 °C → c = 343.2 ± 0.6 m/s
+
+FORA DAS REGRESSÕES
+  diagonal / a32_N10: espectro igual ao da referência ref_a48_fim (desvio 0.08 dB, gravada às 20:04; esta às 20:02): gravado SEM tijolos
+
+1. PROFUNDIDADE vs N     D = α·N + b   (mínimos quadrados ponderados)
+  ΓX a = 32 mm (n = 10): α = 0.81 ± 0.39 dB/fila = 0.25 ± 0.12 dB/cm,  b = 5.1 ± 2.9 dB (z = 1.8 de 0)
+      χ² = 11.5, ν = 8, χ²/ν = 1.44, p = 0.17  → incertezas × S = 1.20
+  ΓX a = 40 mm (n = 10): α = 1.98 ± 0.41 dB/fila = 0.49 ± 0.10 dB/cm,  b = -0.2 ± 2.0 dB (z = 0.1 de 0)
+      χ² = 11.2, ν = 8, χ²/ν = 1.40, p = 0.19  → incertezas × S = 1.18
+  ΓX a = 48 mm (n = 10): α = 1.45 ± 0.29 dB/fila = 0.30 ± 0.06 dB/cm,  b = -0.6 ± 1.9 dB (z = 0.3 de 0)
+      χ² = 2.7, ν = 8, χ²/ν = 0.33, p = 0.95
+  ΓX a = 56 mm (n = 10): α = 1.53 ± 0.11 dB/fila = 0.27 ± 0.02 dB/cm,  b = -0.3 ± 0.6 dB (z = 0.5 de 0)
+      χ² = 9.8, ν = 8, χ²/ν = 1.22, p = 0.28  → incertezas × S = 1.11
+  ΓM a = 40 mm (n = 11): α = 0.93 ± 0.33 dB/fila = 0.33 ± 0.12 dB/cm,  b = 3.3 ± 2.4 dB (z = 1.4 de 0)
+      χ² = 32.4, ν = 9, χ²/ν = 3.60, p = 0.00017  → incertezas × S = 1.90
+  ΓM a = 48 mm (n = 11): α = 1.24 ± 0.19 dB/fila = 0.36 ± 0.06 dB/cm,  b = 1.8 ± 1.2 dB (z = 1.5 de 0)
+      χ² = 26.3, ν = 9, χ²/ν = 2.93, p = 0.0018  → incertezas × S = 1.71
+  ΓM a = 32 mm: só 1 valor(es) de N — não dá para ajustar uma reta.
+
+2. FREQUÊNCIAS DO HIATO por a   (média ponderada dos N ≥ 4;  σ² = σ_disp² + σ_sis²:
+   σ_disp = dispersão entre N, σ_sis = ondulação e referência, comuns ao bloco — não diminuem com a média)
+  ΓX a = 32 mm  [f_B = 5367 Hz; hiato em 7/7 medições, fecha em 7]
+      f_inf = 3806 ± 84 Hz (n = 7; disp. 17, sis. 82);  f_sup = 5923 ± 191 Hz (n = 7; disp. 112, sis. 154)
+      f_centro = 4851 ± 94 Hz (n = 7; disp. 55, sis. 76);  largura = 2166 ± 213 Hz (n = 7; disp. 117, sis. 179)
+      f_inf / f_B = 0.709 ± 0.016;  f_centro / f_B = 0.904 ± 0.018
+  ΓX a = 40 mm  [f_B = 4294 Hz; hiato em 7/7 medições, fecha em 6]
+      f_inf = 3586 ± 151 Hz (n = 7; disp. 40, sis. 145);  f_sup = 5117 ± 227 Hz (n = 6; disp. 176, sis. 144)
+      f_centro = 4352 ± 157 Hz (n = 6; disp. 74, sis. 139);  largura = 1705 ± 318 Hz (n = 6; disp. 217, sis. 233)
+      f_inf / f_B = 0.835 ± 0.035;  f_centro / f_B = 1.014 ± 0.037
+  ΓX a = 48 mm  [f_B = 3578 Hz; hiato em 7/7 medições, fecha em 7]
+      f_inf = 2969 ± 102 Hz (n = 7; disp. 28, sis. 98);  f_sup = 4230 ± 135 Hz (n = 7; disp. 41, sis. 128)
+      f_centro = 3591 ± 81 Hz (n = 7; disp. 28, sis. 76);  largura = 1229 ± 189 Hz (n = 7; disp. 74, sis. 174)
+      f_inf / f_B = 0.830 ± 0.029;  f_centro / f_B = 1.004 ± 0.023
+  ΓX a = 56 mm  [f_B = 3067 Hz; hiato em 7/7 medições, fecha em 7]
+      f_inf = 2917 ± 62 Hz (n = 7; disp. 26, sis. 56);  f_sup = 3722 ± 124 Hz (n = 7; disp. 71, sis. 102)
+      f_centro = 3357 ± 68 Hz (n = 7; disp. 41, sis. 54);  largura = 737 ± 106 Hz (n = 7; disp. 64, sis. 84)
+      f_inf / f_B = 0.951 ± 0.020;  f_centro / f_B = 1.094 ± 0.022
+  ΓM a = 32 mm  [f_B = 7584 Hz; hiato em 1/1 medições, fecha em 0 → hiato ABERTO por cima: sem f_sup]
+      f_inf = 5319 ± 462 Hz (n = 1);  f_sup —
+      f_centro —;  largura —
+      f_inf / f_B = 0.701 ± 0.061
+  ΓM a = 40 mm  [f_B = 6067 Hz; hiato em 8/8 medições, fecha em 5]
+      f_inf = 4554 ± 117 Hz (n = 8; disp. 30, sis. 113);  f_sup = 7326 ± 475 Hz (n = 5; disp. 392, sis. 268)
+      f_centro = 6045 ± 308 Hz (n = 5; disp. 251, sis. 179);  largura = 2954 ± 537 Hz (n = 5; disp. 400, sis. 358)
+      f_inf / f_B = 0.751 ± 0.019;  f_centro / f_B = 0.996 ± 0.051
+  ΓM a = 48 mm  [f_B = 5056 Hz; hiato em 8/8 medições, fecha em 3 → hiato ABERTO por cima: sem f_sup]
+      f_inf = 4065 ± 111 Hz (n = 8; disp. 40, sis. 104);  f_sup —
+      f_centro —;  largura —
+      f_inf / f_B = 0.804 ± 0.022
+
+3. FREQUÊNCIA vs 1/(2d)     f = m·x + b,  x = 1/(2d)   (incerteza de a incluída por variância efetiva)
+   O declive é uma velocidade: se f fosse exatamente f_B dava c.
+  ΓX f_inf  (4 valores de a: 32, 40, 48, 56 mm)
+      reta livre:  m = 138.1 ± 20.3 m/s (z = 10.1 de c),  b = 1662 ± 236 Hz (z = 7.1 de 0)
+          χ² = 3.5, ν = 2, χ²/ν = 1.76, p = 0.17  → incertezas × S = 1.33
+      pela origem: m = 277.6 ± 20.4 m/s (z = 3.2 de c = 343.5 ± 0.6)
+          χ² = 90.0, ν = 3, χ²/ν = 30.01, p = 2.2e-19  → incertezas × S = 5.48
+  ΓX f_centro  (4 valores de a: 32, 40, 48, 56 mm)
+      reta livre:  m = 229.3 ± 20.3 m/s (z = 5.6 de c),  b = 1283 ± 231 Hz (z = 5.6 de 0)
+          χ² = 2.8, ν = 2, χ²/ν = 1.42, p = 0.24  → incertezas × S = 1.19
+      pela origem: m = 339.3 ± 15.2 m/s (z = 0.3 de c = 343.5 ± 0.6)
+          χ² = 46.2, ν = 3, χ²/ν = 15.39, p = 5.2e-10  → incertezas × S = 3.92
+  ΓM f_inf  (3 valores de a: 32, 40, 48 mm)
+      reta livre:  m = 167.8 ± 45.0 m/s (z = 3.9 de c),  b = 1591 ± 738 Hz (z = 2.2 de 0)
+          χ² = 0.0, ν = 1, χ²/ν = 0.00, p = 0.96
+      pela origem: m = 264.3 ± 7.4 m/s (z = 10.6 de c = 343.2 ± 0.6)
+          χ² = 4.6, ν = 2, χ²/ν = 2.32, p = 0.099  → incertezas × S = 1.52
+  ΓM f_centro  (1 valores de a: 40 mm)
+      reta livre:  precisa de pelo menos 3 valores de a.
+      pela origem: precisa de pelo menos 2 valores de a.
+
+4. COMPARAÇÃO ΓX ↔ ΓM  (mesmo a nas duas direções)
+  a = 32 mm:
+      f_inf(ΓM) / f_inf(ΓX) = 1.398 ± 0.125   (Bragg: √2 = 1.414; z = 0.1)
+      f_sup(ΓX) − f_inf(ΓM) = 604 ± 500 Hz  → inconclusivo (menos de 2σ de zero)
+  a = 40 mm:
+      f_inf(ΓM) / f_inf(ΓX) = 1.270 ± 0.063   (Bragg: √2 = 1.414; z = 2.3)
+      f_sup(ΓX) − f_inf(ΓM) = 562 ± 256 Hz  → os hiatos sobrepõem-se
+  a = 48 mm:
+      f_inf(ΓM) / f_inf(ΓX) = 1.369 ± 0.060   (Bragg: √2 = 1.414; z = 0.8)
+      f_sup(ΓX) − f_inf(ΓM) = 166 ± 175 Hz  → inconclusivo (menos de 2σ de zero)
+
+5. TABELA  (incerteza total; entre parênteses: estatística, ondulação, referência)
+  dir passo    ref. usada    ond.     T0            profundidade (dB)                 f_inf (Hz)    f_sup (Hz)   largura (Hz)
+  ΓX  a32_N1   ref_a32        4.2   -8.3   -1.3 ± 4.3 (0.0, 3.9, 1.7)                          —             —              —
+  ΓX  a32_N2   ref_a32        6.2  -12.7    0.1 ± 6.0 (0.1, 5.7, 1.9)                          —             —              —
+  ΓX  a32_N3   ref_a32        7.6  -13.2    3.5 ± 7.2 (0.0, 7.0, 1.6)  5529 ± 889 (29, 846, 272)    5609 ± 599      80 ± 1101
+  ΓX  a32_N4   ref_a32        1.7   -2.2   11.4 ± 2.1 (0.0, 1.6, 1.4)   3947 ± 195 (1, 122, 152)   5768 ± 1747    1821 ± 1903   ⚠ 4/5 rep.
+  ΓX  a32_N5   ref_a32        1.8   -7.9    8.0 ± 2.7 (0.0, 1.6, 2.2)    3846 ± 133 (2, 79, 107)    5622 ± 161     1775 ± 270
+  ΓX  a32_N6   ref_a32        2.2   -1.4   12.7 ± 2.8 (0.0, 2.0, 2.0)      3795 ± 67 (0, 60, 30)    5802 ± 109     2006 ± 125
+  ΓX  a32_N7   ref_a32        1.7   -3.3   13.5 ± 2.3 (0.1, 1.6, 1.7)      3781 ± 70 (0, 52, 47)    6431 ± 165     2649 ± 173
+  ΓX  a32_N8   ref_a32        2.1   -2.0   13.4 ± 2.8 (0.0, 1.9, 2.0)      3880 ± 91 (0, 49, 77)    6028 ± 181     2148 ± 188
+  ΓX  a32_N9   ref_a32        1.5   -6.1    9.9 ± 1.8 (0.0, 1.3, 1.1)      3794 ± 79 (2, 64, 46)    5981 ± 893     2187 ± 940
+  ΓX  a32_N10  ref_a32        1.6   -6.1   13.1 ± 2.0 (0.0, 1.5, 1.4)      3773 ± 78 (2, 55, 55)    5890 ± 919     2117 ± 976   ⚠ 4/5 rep.
+  ΓX  a40_N1   ref_a56        3.1   -8.8   -4.2 ± 3.1 (0.1, 2.8, 1.2)                          —             —              —   ⚠ ref. de outro bloco, 4/5 rep.
+  ΓX  a40_N2   ref_a56        5.4   -6.7    3.9 ± 5.1 (0.0, 4.9, 1.3)    4538 ± 944 (1, 944, 10)    4713 ± 254      175 ± 978   ⚠ ref. de outro bloco
+  ΓX  a40_N3   ref_a56        1.0    2.9    6.0 ± 1.2 (0.0, 0.9, 0.8)    3196 ± 330 (2, 72, 322)    4832 ± 126     1635 ± 278   ⚠ ref. de outro bloco, 4/5 rep.
+  ΓX  a40_N4   ref_a56        1.2   -5.7    8.9 ± 1.6 (0.0, 1.1, 1.1)   3474 ± 168 (18, 141, 89)    5677 ± 114     2203 ± 152   ⚠ ref. de outro bloco
+  ΓX  a40_N5   ref_a56        4.2   -8.8    7.2 ± 4.1 (0.1, 3.8, 1.6)     3625 ± 327 (1, 327, 3)    4783 ± 163     1158 ± 365   ⚠ ref. de outro bloco
+  ΓX  a40_N6   ref_a56        2.0    2.5   14.5 ± 2.0 (0.0, 1.8, 0.8)    3525 ± 122 (1, 108, 58)    4818 ± 271     1293 ± 246   ⚠ ref. de outro bloco
+  ΓX  a40_N7   ref_a40        4.4    4.3   19.0 ± 5.3 (0.1, 4.0, 3.4)   3696 ± 157 (3, 118, 104)    4875 ± 185     1179 ± 269
+  ΓX  a40_N8   ref_a40        4.7   -3.1   10.1 ± 4.8 (0.1, 4.3, 2.3)   3833 ± 213 (1, 146, 155)    5510 ± 462     1677 ± 536
+  ΓX  a40_N9   ref_a40        1.9    0.1   13.2 ± 3.2 (0.1, 1.8, 2.6) 3669 ± 330 (140, 189, 231)    4854 ± 111     1185 ± 389
+  ΓX  a40_N10  ref_a40        2.2    9.1   18.2 ± 4.1 (0.0, 2.0, 3.5)     3556 ± 101 (1, 69, 74)             —              —   ⚠ não fecha
+  ΓX  a48_N1   ref_a48        1.9    0.4   -1.1 ± 2.7 (0.0, 1.8, 2.0)                          —             —              —
+  ΓX  a48_N2   ref_a48        2.4    1.5    2.5 ± 2.7 (0.0, 2.2, 1.7)                          —             —              —   ⚠ 4/5 rep.
+  ΓX  a48_N3   ref_a48        2.3    1.5    4.6 ± 2.7 (0.0, 2.1, 1.7)   3600 ± 502 (1, 201, 460)   3770 ± 1598     171 ± 1671
+  ΓX  a48_N4   ref_a48        2.3   -1.0    5.2 ± 2.9 (0.3, 2.1, 2.0)  3613 ± 568 (20, 112, 557)    4173 ± 364      559 ± 310
+  ΓX  a48_N5   ref_a48        2.7    1.2    8.7 ± 2.8 (0.1, 2.4, 1.4)    2883 ± 125 (2, 75, 100)    4157 ± 260     1274 ± 345
+  ΓX  a48_N6   ref_a48        2.5    0.7    9.6 ± 2.9 (0.0, 2.3, 1.8)     2970 ± 100 (1, 97, 27)    4071 ± 161     1102 ± 206   ⚠ 4/5 rep.
+  ΓX  a48_N7   ref_a48        2.0   -3.0    9.4 ± 2.6 (0.1, 1.8, 1.9)      2982 ± 98 (1, 95, 24)    4093 ± 130     1111 ± 177   ⚠ 4/5 rep.
+  ΓX  a48_N8   ref_a48        2.0   -0.4   10.7 ± 2.1 (0.0, 1.9, 1.0)      2974 ± 83 (1, 81, 17)    4306 ± 112     1332 ± 146
+  ΓX  a48_N9   ref_a48        2.3   -5.2    9.6 ± 2.8 (0.0, 2.1, 1.9)       3019 ± 79 (1, 78, 3)     4332 ± 96     1313 ± 126
+  ΓX  a48_N10  ref_a48        2.8   -4.6   15.0 ± 2.7 (0.0, 2.5, 1.1)    2850 ± 135 (4, 105, 85)    4210 ± 123     1360 ± 207
+  ΓX  a56_N1   ref_a56        0.8   -1.5    0.7 ± 0.7 (0.0, 0.7, 0.1)                          —             —              —
+  ΓX  a56_N2   ref_a56        1.1    0.1    2.7 ± 1.0 (0.1, 1.0, 0.1)                          —             —              —   ⚠ 4/5 rep.
+  ΓX  a56_N3   ref_a56        0.5   -2.1    4.4 ± 0.5 (0.0, 0.5, 0.0)      3018 ± 50 (2, 37, 34)    3142 ± 230      124 ± 233
+  ΓX  a56_N4   ref_a56        1.1   -1.9    5.7 ± 1.0 (0.1, 1.0, 0.2)      2993 ± 75 (1, 39, 64)    3418 ± 200      424 ± 165
+  ΓX  a56_N5   ref_a56        1.6    2.5    9.1 ± 1.5 (0.1, 1.4, 0.3)      2912 ± 72 (7, 43, 57)    3607 ± 133      694 ± 102   ⚠ 4/5 rep.
+  ΓX  a56_N6   ref_a56        1.6    3.2   10.6 ± 1.5 (0.0, 1.4, 0.4)      2941 ± 56 (1, 30, 47)     3587 ± 98       646 ± 73   ⚠ 4/5 rep.
+  ΓX  a56_N7   ref_a56        0.8   -0.7   11.3 ± 0.7 (0.1, 0.7, 0.1)      2884 ± 46 (1, 22, 40)     3593 ± 77       709 ± 54
+  ΓX  a56_N8   ref_a56        1.3   -2.3   11.0 ± 1.2 (0.1, 1.2, 0.2)      2979 ± 47 (1, 24, 41)    3993 ± 103     1013 ± 139
+  ΓX  a56_N9   ref_a56        1.5   -1.5   15.1 ± 1.5 (0.0, 1.4, 0.5)    2595 ± 266 (9, 259, 62)    3809 ± 215     1214 ± 305
+  ΓX  a56_N10  ref_a56        1.0   -2.2   13.3 ± 1.0 (0.1, 0.9, 0.1)     2821 ± 58 (14, 50, 26)     3886 ± 85     1065 ± 120
+  ΓM  a32_N11  ref_a48_fim    1.9    4.8   11.1 ± 2.2 (0.0, 1.8, 1.2)   5319 ± 462 (7, 255, 385)             —              —   ⚠ não fecha, ref. de outro bloco
+  ΓM  a40_N1   ref_a40        1.9   -4.7   -0.8 ± 1.8 (0.0, 1.8, 0.2)                          —             —              —
+  ΓM  a40_N2   ref_a40        3.1    1.6    3.9 ± 2.9 (0.0, 2.9, 0.1)   4688 ± 961 (10, 961, 19)    4921 ± 627     233 ± 1147
+  ΓM  a40_N3   ref_a40        1.8   -0.1    5.0 ± 1.6 (0.0, 1.6, 0.2)     4774 ± 544 (4, 544, 2)    5677 ± 265      903 ± 605   ⚠ 4/5 rep.
+  ΓM  a40_N4   ref_a40        2.9    1.8    7.7 ± 2.6 (0.1, 2.6, 0.2)     4635 ± 203 (7, 203, 5)             —              —   ⚠ não fecha, 4/5 rep.
+  ΓM  a40_N5   ref_a40        2.3    1.3    9.8 ± 2.1 (0.1, 2.1, 0.2)     4711 ± 630 (2, 630, 2)    7143 ± 257     2432 ± 680
+  ΓM  a40_N6   ref_a40        1.1    1.5   12.2 ± 1.1 (0.0, 1.0, 0.2)     4715 ± 134 (3, 134, 4)    8691 ± 307     3976 ± 335   ⚠ sinal/fundo 10 dB
+  ΓM  a40_N7   ref_a40        2.1    2.5   11.3 ± 1.9 (0.0, 1.9, 0.2)     4554 ± 189 (5, 189, 5)    6854 ± 213     2301 ± 285
+  ΓM  a40_N8   ref_a40        1.7    2.1   13.4 ± 1.6 (0.1, 1.6, 0.2)     4602 ± 178 (2, 178, 2)    8392 ± 359     3790 ± 401
+  ΓM  a40_N9   ref_a40        1.3    4.1   11.7 ± 1.2 (0.1, 1.2, 0.2)    4557 ± 134 (11, 134, 1)             —              —   ⚠ não fecha
+  ΓM  a40_N10  ref_a40        1.3    0.4    9.4 ± 1.2 (0.0, 1.2, 0.2)       4516 ± 64 (3, 64, 4)             —              —   ⚠ não fecha
+  ΓM  a40_N11  ref_a40        4.2    0.8    8.0 ± 3.8 (0.1, 3.8, 0.2)     4328 ± 251 (2, 251, 1)    6534 ± 287     2206 ± 381   ⚠ 4/5 rep.
+  ΓM  a48_N1   ref_a48_fim    1.5   -1.6   -2.0 ± 1.4 (0.0, 1.3, 0.2)                          —             —              —
+  ΓM  a48_N2   ref_a48_fim    1.0    8.6    4.3 ± 0.9 (0.0, 0.9, 0.2)   5828 ± 449 (5, 134, 428)             —              —   ⚠ não fecha, 4/5 rep.
+  ΓM  a48_N3   ref_a48_fim    0.9    8.7    7.2 ± 0.8 (0.0, 0.8, 0.1)      3805 ± 54 (1, 52, 10)             —              —   ⚠ não fecha
+  ΓM  a48_N4   ref_a48_fim    1.3    8.6    9.5 ± 1.2 (0.0, 1.2, 0.2)    3979 ± 169 (8, 161, 50)             —              —   ⚠ não fecha
+  ΓM  a48_N5   ref_a48_fim    1.4   -0.6    7.8 ± 1.3 (0.0, 1.3, 0.3)   4226 ± 171 (12, 149, 83)    6115 ± 592     1889 ± 570
+  ΓM  a48_N6   ref_a48_fim    1.7    0.8    8.2 ± 1.6 (0.0, 1.6, 0.3)    4071 ± 131 (9, 113, 66)             —              —   ⚠ não fecha
+  ΓM  a48_N7   ref_a48_fim    1.7   -1.8    8.5 ± 1.5 (0.0, 1.5, 0.1)     4252 ± 129 (2, 85, 96)    5203 ± 164      951 ± 175
+  ΓM  a48_N8   ref_a48_fim    1.6   -1.4   10.4 ± 1.5 (0.0, 1.5, 0.1)    4269 ± 160 (3, 127, 97)    7145 ± 500     2875 ± 433
+  ΓM  a48_N9   ref_a48_fim    1.0    5.7   13.0 ± 0.9 (0.0, 0.9, 0.3)      3976 ± 61 (2, 57, 21)             —              —   ⚠ não fecha
+  ΓM  a48_N10  ref_a48_fim    1.1    5.2   14.4 ± 1.0 (0.0, 1.0, 0.1)     4064 ± 96 (13, 84, 45)             —              —   ⚠ não fecha
+  ΓM  a48_N11  ref_a48_fim    2.6    0.7   13.8 ± 2.7 (0.1, 2.4, 1.1)    4130 ± 203 (5, 195, 54)             —              —   ⚠ não fecha
+
+ond. = ondulação de T na banda de controlo (dB): quanto menor, melhor a referência.
+σ² = σ_estat² + σ_ond² + σ_ref² (+ σ_res² nas frequências). Detalhes em LEIA-ME.txt.
