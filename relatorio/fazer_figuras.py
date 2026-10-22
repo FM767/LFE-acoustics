@@ -24,35 +24,43 @@ COR = {32: "#1b9e77", 40: "#d95f02", 48: "#7570b3", 56: "#e7298a"}
 MARC = {32: "o", 40: "s", 48: "^", 56: "D"}
 
 # ---------------------------------------------------------------- Fig. 2
+# Eixo x em unidades de f_B da direção original, f_X = c/(2a), nas DUAS direções, para comparar
+# diretamente: o Bragg de ΓX fica em 1 e o de ΓM em √2 (tracejados).
 cur = json.loads((D / "curvas_T_a48.json").read_text())
-# teoria (teoria.txt) e medido (resultados.txt), a = 48 mm
-info = {"GX": dict(tit=r"$\Gamma X$, $a=48$ mm", fB=3578, teo=(2988, 3880), N=["a48_N4", "a48_N7", "a48_N10"],
-                   finf=(2969, 102), fsup=(4230, 135), dif=7156, xl=(1.6, 8.0)),
-        "GM": dict(tit=r"$\Gamma M$, $a=48$ mm", fB=5056, teo=(4385, 4942), N=["a48_N4", "a48_N7", "a48_N11"],
-                   finf=(4040, 93), fsup=None, dif=5056, xl=(1.6, 10.5))}
-fig, axs = plt.subplots(2, 1, figsize=(COL, 3.45))
+c_som = lambda T: 331.3 * np.sqrt(1 + T / 273.15)
+# teoria (teoria.txt) e medido (resultados.txt), a = 48 mm; temperatura de cada sessão
+info = {"GX": dict(tit=r"$\Gamma X$, $a=48$ mm", fX=c_som(20.5) / (2 * 0.048), teo=(2988, 3880),
+                   N=["a48_N4", "a48_N7", "a48_N10"], finf=(2969, 102), fsup=(4230, 135), bragg=1.0),
+        "GM": dict(tit=r"$\Gamma M$, $a=48$ mm", fX=c_som(20.0) / (2 * 0.048), teo=(4385, 4942),
+                   N=["a48_N4", "a48_N7", "a48_N11"], finf=(4040, 93), fsup=None, bragg=np.sqrt(2))}
+fig, axs = plt.subplots(2, 1, figsize=(COL, 3.45), sharex=True)
 for ax, k in zip(axs, ("GX", "GM")):
-    I, f = info[k], np.array(cur[k]["f"]) / 1000
-    ax.axvspan(*np.array(I["teo"]) / 1000, color="0.85", lw=0, label="hiato teórico (PWE)")
+    I = info[k]
+    u = np.array(cur[k]["f"]) / I["fX"]
+    ax.axvspan(*np.array(I["teo"]) / I["fX"], color="0.85", lw=0, label="PWE gap")
     for c, m in zip(AZ, I["N"]):
-        ax.plot(f, cur[k][m], color=c, label=f"$N={m.split('N')[1]}$")
+        ax.plot(u, cur[k][m], color=c, label=f"$N={m.split('N')[1]}$")
     ax.axhline(0, color="0.4", lw=0.5)
-    ax.axhline(-6, color="0.3", lw=0.6, ls=":", label=r"limiar $T_0-6$ dB")
-    ax.axvline(I["fB"] / 1000, color="k", lw=0.7, ls="--", label=r"$f_B=c/2d$")
+    ax.axhline(-6, color="0.3", lw=0.6, ls=":", label=r"threshold $T_0-6$ dB")
+    ax.axvline(I["bragg"], color="k", lw=0.7, ls="--", label=r"Bragg: $1$ ($\Gamma X$), $\sqrt{2}$ ($\Gamma M$)")
+    if k == "GM":       # referência: onde estaria o Bragg de ΓX
+        ax.axvline(1.0, color="0.55", lw=0.6, ls="--")
+        ax.text(1.0, -22.5, r"$1$", ha="center", va="bottom", fontsize=6.3, color="0.4")
+        ax.text(np.sqrt(2), -22.5, r"$\sqrt{2}$", ha="center", va="bottom", fontsize=6.3)
     for v, s in [I["finf"]] + ([I["fsup"]] if I["fsup"] else []):
-        ax.axvspan((v - s) / 1000, (v + s) / 1000, color="#de2d26", alpha=0.25, lw=0)
-        ax.axvline(v / 1000, color="#de2d26", lw=0.8)
+        ax.axvspan((v - s) / I["fX"], (v + s) / I["fX"], color="#de2d26", alpha=0.25, lw=0)
+        ax.axvline(v / I["fX"], color="#de2d26", lw=0.8)
     if k == "GM":
-        ax.annotate(r"difração: $c/L=f_B$", xy=(I["dif"] / 1000, 7), xytext=(6.4, 7.3), fontsize=6.3,
-                    arrowprops=dict(arrowstyle="-|>", lw=0.5, color="0.3"), va="center")
-    ax.set_xlim(*I["xl"]); ax.set_ylim(-24, 10)
+        ax.annotate(r"diffraction from $c/L=f_B$", xy=(np.sqrt(2) + 0.02, 3), xytext=(1.85, 5.5),
+                    fontsize=6.3, arrowprops=dict(arrowstyle="-|>", lw=0.5, color="0.3"), va="center")
+    ax.set_xlim(0.45, 2.9); ax.set_ylim(-24, 12)
     ax.set_ylabel(r"$T-T_0$ (dB)")
     ax.text(0.015, 0.95, I["tit"], transform=ax.transAxes, va="top", fontsize=7.5)
-axs[1].set_xlabel(r"$f$ (kHz)")
+axs[1].set_xlabel(r"$f\,/\,(c/2a)$")
 h, l = axs[0].get_legend_handles_labels()
 from matplotlib.patches import Patch
 h0, l0 = [h[0], h[4], h[5]], [l[0], l[4], l[5]]
-h0.append(Patch(color="#de2d26", alpha=0.5)); l0.append(r"bordos medidos ($\pm1\sigma$)")
+h0.append(Patch(color="#de2d26", alpha=0.5)); l0.append(r"measured edges ($\pm1\sigma$)")
 fig.tight_layout(h_pad=0.4, rect=(0, 0, 1, 0.915))
 fig.legend(h0, l0, loc="upper center", ncol=2, handlelength=1.6, columnspacing=1.0,
            bbox_to_anchor=(0.55, 1.0), labelspacing=0.3)
@@ -60,6 +68,7 @@ for ax in axs:
     hh, ll = ax.get_legend_handles_labels()
     ax.legend(hh[1:4], ll[1:4], loc="lower right", ncol=3, handlelength=1.4, columnspacing=0.8)
 fig.savefig(F / "fig2_transmissao.pdf")
+fig.savefig(F / "fig2_transmission.pdf")      # nome usado no relatório em inglês
 
 # ---------------------------------------------------------------- Fig. 3
 t = pd.read_csv(D / "tabela.csv")
