@@ -57,10 +57,8 @@ def _vazio(ax, texto):
 
 
 def _janelas(ax, fb=1.0, ctrl=1.0):
-    """Banda de controlo, janela da profundidade e f_B (em Hz se fb for dado, senão em f/f_B).
+    """Janela da profundidade e f_B (em Hz se fb for dado, senão em f/f_B).
     ctrl = c/(2a) nas mesmas unidades (a banda de controlo é 0.35–0.70 × c/(2a))."""
-    ax.axvspan(A.BASE[0] * ctrl, A.BASE[1] * ctrl, color="#1baf7a", alpha=0.10, lw=0,
-               label="banda de controlo (T0, ondulação)")
     ax.axvspan(A.JAN_PROF[0] * fb, A.JAN_PROF[1] * fb, color="#4a3aa7", alpha=0.10, lw=0,
                label="janela da profundidade")
     ax.axvline(fb, color=TINTA2, ls="--", lw=0.9, label="f_B = c/(2d)")
